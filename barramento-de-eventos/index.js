@@ -10,6 +10,8 @@ app.post('/eventos', (req, res) => {
     //{tipo}
     const evento = req.body
     console.log(evento)
+    //direcionando o evento para o mss de sentimentos
+    axios.post('http://localhost:3000/eventos', evento)
     //direcionando o evento para o mss de lembretes
     axios.post('http://localhost:4000/eventos', evento)
     //direcionando o evento para o mss de observacoes

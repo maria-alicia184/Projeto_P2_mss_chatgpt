@@ -18,7 +18,8 @@ const funcoes = {
             id: observacao.id,
             texto: observacao.texto,
             lembreteId: observacao.lembreteId,
-            status: observacao.status
+            status: observacao.status,
+            sentimentos: observacao.sentimentos
         }
     })
     }

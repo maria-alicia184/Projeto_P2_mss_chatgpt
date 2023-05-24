@@ -24,7 +24,7 @@ app.post('/lembretes', async (req, res) => {
         {
             tipo: 'LembreteCriado',
             dados: {
-                id: idAtual, texto
+                id: idAtual, texto, sentimentos
             }
         }
     )
