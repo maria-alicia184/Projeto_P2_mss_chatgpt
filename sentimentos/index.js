@@ -11,7 +11,7 @@ const funcoes = {
     LembreteCriado: (lembrete) => {
         lembrete.sentimento = lembrete.texto.includes(palavraChave)? 'Positivo' || 'Negativo' || 'Neutro':
         axios.post('http://localhost:10000/eventos', 
-        {tipo: 'LembreteCrido', dados:lembrete}
+        {tipo: 'LembreteCriado', dados:lembrete}
         )
     },
 
@@ -39,8 +39,6 @@ app.get('/sentimentos',(req, res) => {
 
 })
 
- 
-
 //POST localhost:10000/eventos
 
 app.post('/eventos', (req, res) => {
@@ -56,8 +54,6 @@ app.post('/eventos', (req, res) => {
     res.status(200).send({msg:'ok'})
 
 })
-
- 
 
 const {MSS_SENTIMENTOS_PORTA} = process.env
 

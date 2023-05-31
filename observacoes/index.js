@@ -19,7 +19,7 @@ const funcoes = {
             texto: observacao.texto,
             lembreteId: observacao.lembreteId,
             status: observacao.status,
-            sentimentos: observacao.sentimentos
+            sentimento: observacao.sentimento
         }
     })
     }
@@ -42,7 +42,7 @@ app.post('/lembretes/:id/observacoes',async (req, res) => {
         {
             tipo: 'ObservacaoCriada',
             dados: {
-                id: idObs, texto, lembreteId: req.params.id, status: 'aguardando'
+                id: idObs, texto, lembreteId: req.params.id, status: 'aguardando', sentimento
             }
         }
     )
