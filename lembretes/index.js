@@ -24,7 +24,7 @@ app.post('/lembretes', async (req, res) => {
         {
             tipo: 'LembreteCriado',
             dados: {
-                id: idAtual, texto, sentimentos
+                id: idAtual, texto, sentimento
             }
         }
     )
@@ -32,6 +32,11 @@ app.post('/lembretes', async (req, res) => {
 })
 
 app.post('/eventos', (req, res) => {
+    console.log(req.body)
+    res.status(200).send({msg: 'ok'})
+})
+
+app.post('http://localhost:3000/eventos', (req, res) => {
     console.log(req.body)
     res.status(200).send({msg: 'ok'})
 })
